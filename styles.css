@@ -1,20 +1,125 @@
 body {
     margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* background-color: black; */
 }
 
-header {
+header nav {
     display: flex;
     flex-direction: row;
-    height: 75px;
+    align-items: stretch;
+    justify-content: space-between;
+    padding-inline-start: min(2%, 10px);
+    border-bottom: 1px solid#a9a9a9;
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    @media (max-width: 950px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+
+    input[type="checkbox"],
+    label {
+        display: none;
+    }
 }
 
-header :first-child {
+#home {
     flex-grow: 1;
-    background-color: red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    user-select: none;
+    -webkit-user-select: none;
+    list-style-type: none;
+
+    a {
+        font-size: xx-large;
+    }
+
+    #firstName {
+        font-weight: 900;
+    }
 }
 
-header a:not(:first-child) {
-    width: 200px;
-    border: 1px solid;
-    font-size: x-large;
+#mainLinks {
+    display: flex;
+    flex-direction: row;
+
+    li {
+        width: 200px;
+        font-size: x-large;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @media (min-width: 950px) {
+        border-inline-start: 1px solid #a9a9a9;
+        padding-inline-start: 2px;
+    }
+
+    a:hover {
+        color: rgba(55, 55, 255, 0.75);
+    }
+
+    a:active {
+        color: rgb(55, 55, 255);
+    }
+}
+
+@media (max-width: 600px) {
+    header nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        label {
+            display: block;
+            font-size: large;
+            margin-inline-end: 1.5rem;
+            padding: .25rem;
+            user-select: none;
+            -webkit-user-select: none;
+            border-radius: .25rem;
+            border: 1px solid black;
+        }
+    }
+
+    input[type="checkbox"]:not(:checked)+#mainLinks {
+        display: none;
+    }
+
+    #mainLinks {
+        position: fixed;
+        top: 100px;
+        right: 4px;
+        flex-direction: column;
+        background-color: #fff;
+        padding-inline: .5rem;
+        border-radius: .15rem;
+
+        li {
+            width: auto;
+            text-align: left;
+            padding-block: .5rem;
+        }
+
+        li:not(:last-child) {
+            border-bottom: 1px solid black;
+        }
+    }
+}
+
+main {
+    background-color: #1e1e1e;
+    padding-block-start: .1em;
+    padding-inline: min(10px, 100% - 2rem);
+    height: 100vh;
 }

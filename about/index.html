@@ -11,12 +11,26 @@
 
 <body>
     <header>
-        <div><a href="/">Home</a></div>
-        <a href="/technical">Technical</a>
-        <a href="/communication">Communication</a>
-        <a href="/about">About</a>
+        <nav>
+            <ul id="home">
+                <li><a href="/"><span id="firstName">Ruben</span> Aleman</a></li>
+            </ul>
+            <label for="menuToggle" tabindex="0">Menu</label>
+            <input id="menuToggle" name="menuToggle" type="checkbox" />
+            <ul id="mainLinks">
+                <li><a href="/technical">Technical</a></li>
+                <li><a href="/communication">Communication</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
     </header>
-    <main></main>
+    <main>
+        <div>
+            <h1>About Me</h1>
+            <p>I thought of my web portfolio as something divorced from my web work. It was just a place to store
+                records or links to my actual work.</p>
+        </div>
+    </main>
 </body>
 
 </html>
