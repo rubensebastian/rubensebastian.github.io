@@ -9,10 +9,18 @@
 
 <body>
   <header>
-    <div><a href="/"><span id="firstName">Ruben</span> Aleman</a></div>
-    <a href="/technical">Technical</a>
-    <a href="/communication">Communication</a>
-    <a href="/about">About</a>
+    <nav>
+      <ul id="home">
+        <li><a href="/"><span id="firstName">Ruben</span> Aleman</a></li>
+      </ul>
+      <label for="menuToggle" tabindex="0">Menu</label>
+      <input id="menuToggle" name="menuToggle" type="checkbox" />
+      <ul id="mainLinks">
+        <li><a href="/development">Development</a></li>
+        <li><a href="/communication">Communication</a></li>
+        <li><a href="/about">About Ruben</a></li>
+      </ul>
+    </nav>
   </header>
   <main></main>
 </body>

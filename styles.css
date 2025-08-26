@@ -53,7 +53,7 @@ header nav {
 
     li {
         width: 200px;
-        font-size: x-large;
+        font-size: large;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -118,8 +118,13 @@ header nav {
 }
 
 main {
-    background-color: #1e1e1e;
+    background-color: #dfdfdf;
     padding-block-start: .1em;
     padding-inline: min(10px, 100% - 2rem);
     height: 100vh;
+
+    >div.mainContent {
+        max-width: min(1000px, 100% - 2rem);
+        margin-inline: auto;
+    }
 }

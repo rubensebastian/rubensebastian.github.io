@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Development Experience</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="shortcut icon" href="../_images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul id="home">
+                <li><a href="/"><span id="firstName">Ruben</span> Aleman</a></li>
+            </ul>
+            <label for="menuToggle" tabindex="0">Menu</label>
+            <input id="menuToggle" name="menuToggle" type="checkbox" />
+            <ul id="mainLinks">
+                <li><a href="/development">Development</a></li>
+                <li><a href="/communication">Communication</a></li>
+                <li><a href="/about">About Ruben</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="mainContent">
+            <h1>Development Experience</h1>
+
+
+            <h2>Video Format Conversion Automation</h2>
+            <p>FSU was maintaining a collection of over 800 videos developed from 2007-2015 through the <a
+                    href="https://en.wikipedia.org/wiki/Geoset">GEOSET initative</a>. These videos could only run
+                through
+                the outdated Mediasite player and cost the university more than $10,000 per month. To preserve these
+                records, I wrote a <a href="https://github.com/rubensebastian/videoDownload">collection of python
+                    scripts</a> to download the collection of files, convert the slides (images) into video based on
+                timings pulled from xml, and overlay the slides with a speaker video if necessary. The project used a
+                Selenium bot and a number of video manipulation libraries for python.</p>
+
+            <h2>eTextbook Retrieval Automation</h2>
+            <p>This project serves to automate a number of process associated with FSU Libraries’ eTextbook program.
+                Previously,
+                the Libraries used part-time staff to manually compile thousands of entries. I drastically reduced time
+                spent on
+                this project by automating calls to an API, compiling results in the needed CSV files, and running a bot
+                with
+                Selenium to check access models (which were generated separately from the API). <a
+                    href="https://github.com/rubensebastian/eTextbook-Search">eTextbook Automation Github Repo</a>.</p>
+
+            <h2>Math Fun</h2>
+            <p>I began developing <a href="https://math-fun.org">Math Fun</a> as a digitization of Math Fun Day with the
+                FSU Math Department. The collaboration eventually fell through, but I am continuing to build out
+                components for the website. The purely front-end project is built on React.js, and it uses p5.js for
+                visualization of some of the components. <a href="https://github.com/rubensebastian/math-fun-1">Math Fun
+                    Github Repo</a>.</p>
+        </div>
+    </main>
+</body>
+
+</html>
