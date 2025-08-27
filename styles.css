@@ -124,7 +124,7 @@ main {
     height: 100vh;
 
     >div.mainContent {
-        max-width: min(1000px, 100% - 2rem);
+        max-width: min(900px, 100% - 2rem);
         margin-inline: auto;
     }
 }
