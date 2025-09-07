@@ -1,7 +1,11 @@
+:root {
+    --pop-color: rgba(55, 55, 255);
+    --pop-color-light: rgba(55, 55, 255, 0.75);
+}
+
 body {
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* background-color: black; */
 }
 
 header nav {
@@ -65,12 +69,42 @@ header nav {
         padding-inline-start: 2px;
     }
 
-    a:hover {
-        color: rgba(55, 55, 255, 0.75);
-    }
+    a {
 
-    a:active {
-        color: rgb(55, 55, 255);
+        >.linkText {
+            position: relative;
+        }
+
+        /* modified from https://www.30secondsofcode.org/css/s/hover-underline-animation/ */
+        >.linkText::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -7px;
+            left: 0;
+            background-color: var(--pop-color-light);
+            transition: transform 0.25s ease-out;
+        }
+
+        &:hover {
+            color: var(--pop-color-light);
+
+            >.linkText::after {
+                transform: scaleX(1);
+                transform-origin: bottom center;
+            }
+        }
+
+        &:active {
+            color: var(--pop-color);
+
+            >.linkText::after {
+                color: var(--pop-color);
+                transform: scaleX(0.5);
+            }
+        }
     }
 }
 
@@ -119,12 +153,23 @@ header nav {
 
 main {
     background-color: #dfdfdf;
-    padding-block-start: .1em;
+    padding-block: .1em;
     padding-inline: min(10px, 100% - 2rem);
-    height: 100vh;
 
     >div.mainContent {
         max-width: min(900px, 100% - 2rem);
         margin-inline: auto;
     }
+}
+
+footer {
+    background-color: black;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+
+    padding-inline: 20px;
 }
