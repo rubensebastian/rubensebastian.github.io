@@ -160,6 +160,18 @@ main {
         max-width: min(900px, 100% - 2rem);
         margin-inline: auto;
     }
+
+    a {
+        color: var(--pop-color);
+
+        &:hover {
+            color: var(--pop-color-light);
+        }
+
+        &:active {
+            color: var(--pop-color);
+        }
+    }
 }
 
 footer {
