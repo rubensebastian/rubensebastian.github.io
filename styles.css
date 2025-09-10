@@ -1,6 +1,13 @@
 :root {
-    --pop-color: rgba(55, 55, 255);
-    --pop-color-light: rgba(55, 55, 255, 0.75);
+    --light-pop-color: #5a5aff;
+    --light-pop-color-hover: #3737ff;
+    --light-theme-background: #dfdfdf;
+    --light-theme-text: #2f2e3b;
+
+    --dark-pop-color: #d8d8ff;
+    --dark-pop-color-hover: #efefff;
+    --dark-theme-background: #303030;
+    --dark-theme-text: #d7d4ff;
 }
 
 body {
@@ -84,12 +91,12 @@ header nav {
             height: 2px;
             bottom: -7px;
             left: 0;
-            background-color: var(--pop-color-light);
+            background-color: var(--pop-color-hover);
             transition: transform 0.25s ease-out;
         }
 
         &:hover {
-            color: var(--pop-color-light);
+            color: var(--pop-color-hover);
 
             >.linkText::after {
                 transform: scaleX(1);
@@ -152,7 +159,9 @@ header nav {
 }
 
 main {
-    background-color: #dfdfdf;
+    background-color: var(--light-theme-background);
+    color: var(--light-theme-text);
+
     padding-block: .1em;
     padding-inline: min(10px, 100% - 2rem);
 
@@ -162,14 +171,14 @@ main {
     }
 
     a {
-        color: var(--pop-color);
+        color: var(--light-pop-color);
 
         &:hover {
-            color: var(--pop-color-light);
+            color: var(--light-pop-color-hover);
         }
 
         &:active {
-            color: var(--pop-color);
+            color: var(--light-pop-color);
         }
     }
 }
