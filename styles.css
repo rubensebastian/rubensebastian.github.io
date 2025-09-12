@@ -15,6 +15,14 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+h1 {
+    margin-block: 1rem;
+}
+
+h2 {
+    margin-block: .5rem;
+}
+
 header nav {
     display: flex;
     flex-direction: row;
@@ -91,12 +99,12 @@ header nav {
             height: 2px;
             bottom: -7px;
             left: 0;
-            background-color: var(--pop-color-hover);
+            background-color: var(--light-pop-color-hover);
             transition: transform 0.25s ease-out;
         }
 
         &:hover {
-            color: var(--pop-color-hover);
+            color: var(--light-pop-color-hover);
 
             >.linkText::after {
                 transform: scaleX(1);
@@ -105,10 +113,10 @@ header nav {
         }
 
         &:active {
-            color: var(--pop-color);
+            color: var(--light-pop-color);
 
             >.linkText::after {
-                color: var(--pop-color);
+                color: var(--light-pop-color);
                 transform: scaleX(0.5);
             }
         }
