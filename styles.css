@@ -1,13 +1,13 @@
 :root {
-    --light-pop-color: #5a5aff;
-    --light-pop-color-hover: #3737ff;
-    --light-theme-background: #dfdfdf;
+    --light-pop-color: #1622ff;
+    --light-pop-color-hover: #5d00ff;
+    --light-theme-background: #efefef;
     --light-theme-text: #2f2e3b;
 
-    --dark-pop-color: #d8d8ff;
-    --dark-pop-color-hover: #efefff;
-    --dark-theme-background: #303030;
-    --dark-theme-text: #d7d4ff;
+    --dark-pop-color: #bbbbff;
+    --dark-pop-color-hover: #e4e4ff;
+    --dark-theme-background: #1d1d1d;
+    --dark-theme-text: #ddddff;
 }
 
 body {
@@ -15,12 +15,8 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h1 {
-    margin-block: 1rem;
-}
-
 h2 {
-    margin-block: .5rem;
+    margin-block-end: 1px;
 }
 
 header nav {
@@ -167,8 +163,8 @@ header nav {
 }
 
 main {
-    background-color: var(--light-theme-background);
-    color: var(--light-theme-text);
+    background-color: var(--dark-theme-background);
+    color: var(--dark-theme-text);
 
     padding-block: .1em;
     padding-inline: min(10px, 100% - 2rem);
@@ -179,14 +175,15 @@ main {
     }
 
     a {
-        color: var(--light-pop-color);
+        color: var(--dark-pop-color);
 
         &:hover {
-            color: var(--light-pop-color-hover);
+            color: var(--dark-pop-color-hover);
+            text-decoration: none;
         }
 
         &:active {
-            color: var(--light-pop-color);
+            color: var(--dark-pop-color);
         }
     }
 }

@@ -69,15 +69,21 @@
                 <h2>JobNote</h2>
                 <p>I built <a href="https://jobnote.app">this hobby project</a> as a way to help job seekers improve
                     their application experience. The web
-                    app does not feed user data into an LLM like ChatGPT, which would generate résumés that are error
-                    prone and sloppy. Instead, the user's résumé is split up and saved to a database along with vector
-                    embeddings representing the content. When a user optimizes their résumé for a particular job, the
-                    server compares the embeddings of the job description with the embeddings of the résumé and builds a
+                    app does not feed user data into an LLM like ChatGPT, which would generate résumés that are
+                    error
+                    prone and sloppy. Instead, the user's résumé is split up and saved to a database along with
+                    vector
+                    embeddings representing the content. When a user optimizes their résumé for a particular job,
+                    the
+                    server compares the embeddings of the job description with the embeddings of the résumé and
+                    builds a
                     new document tailored for that particular job.
                 </p>
                 <p>
-                    JobNote is a Next.js Typescript application using the app router. The embeddings are generated with
-                    the OpenAI API and stored in a postgres database, along with user information and résumé content.
+                    JobNote is a Next.js Typescript application using the app router. The embeddings are generated
+                    with
+                    the OpenAI API and stored in a postgres database, along with user information and résumé
+                    content.
                     The backend of the site is an Express server. There is also a <a href="/">JobNote Chrome
                         Extension</a> that allows users to save jobs to their account as the browse the web.
                 </p>
