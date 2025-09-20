@@ -7,7 +7,13 @@
     --dark-pop-color: #bbbbff;
     --dark-pop-color-hover: #e4e4ff;
     --dark-theme-background: #1d1d1d;
-    --dark-theme-text: #ddddff;
+    --dark-theme-text: #e0e0ff;
+
+    --content-width: 900px;
+}
+
+html {
+    background-color: var(--dark-theme-background);
 }
 
 body {
@@ -26,6 +32,7 @@ header nav {
     justify-content: space-between;
     padding-inline-start: min(2%, 10px);
     border-bottom: 1px solid#a9a9a9;
+    background-color: var(--dark-theme-text);
 
     a {
         color: black;
@@ -143,21 +150,18 @@ header nav {
 
     #mainLinks {
         position: fixed;
-        top: 100px;
+        top: 75px;
         right: 4px;
         flex-direction: column;
-        background-color: #fff;
-        padding-inline: .5rem;
+        background-color: var(--dark-theme-text);
+        padding-inline: 1rem;
+        padding-block: .5rem;
         border-radius: .15rem;
 
         li {
             width: auto;
             text-align: left;
             padding-block: .5rem;
-        }
-
-        li:not(:last-child) {
-            border-bottom: 1px solid black;
         }
     }
 }
@@ -169,8 +173,27 @@ main {
     padding-block: .1em;
     padding-inline: min(10px, 100% - 2rem);
 
-    >div.mainContent {
-        max-width: min(900px, 100% - 2rem);
+    div.home {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        min-height: 80vh;
+
+        img {
+            border-radius: 1em;
+        }
+
+        p.introText {
+            margin-inline: 1rem;
+            max-width: calc(var(--content-width) - 350px);
+        }
+    }
+
+    div.mainContent {
+        max-width: min(var(--content-width), 100% - 2rem);
         margin-inline: auto;
     }
 
@@ -178,12 +201,12 @@ main {
         color: var(--dark-pop-color);
 
         &:hover {
-            color: var(--dark-pop-color-hover);
+            color: var(--dark-theme-text);
             text-decoration: none;
         }
 
         &:active {
-            color: var(--dark-pop-color);
+            color: var(--dark-theme-text);
         }
     }
 }
