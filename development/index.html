@@ -62,8 +62,16 @@
 
           <img
             class="highlightPhoto"
-            src="../images/press.png"
-            width="600"
+            srcset="
+              ../images/press-400w.avif   400w,
+              ../images/press-600w.avif   600w,
+              ../images/press-800w.avif   800w,
+              ../images/press-1000w.avif 1000w,
+              ../images/press-1200w.avif 1200w,
+              ../images/press-1600w.avif 1600w
+            "
+            sizes="(width < 800px) 400px, (width < 1000px) 600px, (width < 1200px) 800px, (width < 1400px) 1000px, (width < 1600) 1200px, (width < 2000px) 1600px"
+            src="../images/press-1600w.avif"
             alt=""
           />
 
@@ -116,8 +124,16 @@
 
           <img
             class="highlightPhoto"
-            src="../images/jobnote-portfolio.png"
-            width="600"
+            srcset="
+              ../images/jobnote-portfolio-400w.avif   400w,
+              ../images/jobnote-portfolio-600w.avif   600w,
+              ../images/jobnote-portfolio-800w.avif   800w,
+              ../images/jobnote-portfolio-1000w.avif 1000w,
+              ../images/jobnote-portfolio-1200w.avif 1200w,
+              ../images/jobnote-portfolio-1600w.avif 1600w
+            "
+            sizes="(width < 800px) 400px, (width < 1000px) 600px, (width < 1200px) 800px, (width < 1400px) 1000px, (width < 1600) 1200px, (width < 2000px) 1600px"
+            src="../images/portfolio-2000w.avif 1600w"
             alt=""
           />
 

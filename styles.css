@@ -252,6 +252,8 @@ footer {
     margin-inline: auto;
     display: block;
     margin-block-end: var(--paragraph-margin-bottom);
-    max-width: min(600px, 100% - 1rem);
+    /* max-width: min(600px, 100% - 1rem); */
+    max-width: 100%;
+    height: auto;
     border-radius: .25rem;
 }
