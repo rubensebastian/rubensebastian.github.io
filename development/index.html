@@ -1,166 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Development experience of the portfolio site of Ruben Aleman">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Development experience of the portfolio site of Ruben Aleman"
+    />
     <title>Development Experience | Ruben Aleman</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-</head>
+    <link rel="stylesheet" href="../styles.css" />
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav>
-            <ul id="home">
-                <li><a href="/"><span id="firstName">Ruben</span> Aleman</a></li>
-            </ul>
-            <label for="menuToggle" tabindex="0">Menu</label>
-            <input id="menuToggle" name="menuToggle" type="checkbox" />
-            <ul id="mainLinks">
-                <li>
-                    <a href="/development"><span class="linkText">Development</span></a>
-                </li>
-                <li>
-                    <a href="/communication"><span class="linkText">Communication</span></a>
-                </li>
-                <li>
-                    <a href="/about"><span class="linkText">About Ruben</span></a>
-                </li>
-            </ul>
-        </nav>
+      <nav>
+        <ul id="home">
+          <li>
+            <a href="/"><span id="firstName">Ruben</span> Aleman</a>
+          </li>
+        </ul>
+        <label for="menuToggle" tabindex="0">Menu</label>
+        <input id="menuToggle" name="menuToggle" type="checkbox" />
+        <ul id="mainLinks">
+          <li>
+            <a href="/development"><span class="linkText">Development</span></a>
+          </li>
+          <li>
+            <a href="/communication"
+              ><span class="linkText">Communication</span></a
+            >
+          </li>
+          <li>
+            <a href="/about"><span class="linkText">About Ruben</span></a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <main class="mainContent">
-        <div class="mainContent">
-            <h1>Development Experience</h1>
+    <main>
+      <div class="mainContent">
+        <h1>Development Experience</h1>
 
-            <section>
-                <h2 id="chatbot">Retrieval Augmented Chatbot</h2>
-                <p>
-                    Hopkins Press contains thousands of proprietary books. This book content cannot be accessed by
-                    customers
-                    until they have already purchased the book. We are testing a Retrieval Augmented Generation (RAG)
-                    Chatbot on a set of our book pages. The chatbot allows users to "interrogate" the book contents with
-                    their research questions <em>without</em> sharing the book content itself. An example of the chatbot
-                    can be found on the page <a href="https://press.jhu.edu/books/title/53869/teaching-ai">Teaching with
-                        AI</a>.
-                </p>
-                <p>
-                    The chatbot itself is a React app using the <a href="https://www.npmjs.com/package/ai">AI SDK</a> to
-                    stream the chat responses to the frontend. The pages are built by Next.js according to their BookID;
-                    Next.js also handles the abstraction of the server-side functions, which connect to the OpenAI API
-                    and
-                    to our database. The database contains the contents of each book in individuals paragraphs—as well
-                    as
-                    the vector embeddings of each paragraph. When a user asks a question, the following happens:
-                </p>
-                <ol>
-                    <li>The question is converted into a vector embedding.</li>
-                    <li>The vector embedding is compared against the book content embeddings to find the most relevant
-                        content.</li>
-                    <li>The user question and book contents are passed to the OpenAI's Chat Completion AI along with
-                        instructions on how to respond to the user.</li>
-                    <li>The answer is streamed to the user.</li>
-                </ol>
-            </section>
+        <section aria-labelledby="Drupal">
+          <h2 id="Drupal">Drupal</h2>
+          <p>
+            The
+            <a href="https://www.press.jhu.edu"
+              >main Johns Hopkins University Press website</a
+            >
+            runs Drupal 10. I work primarily on the front end:
+            <strong
+              >building & improving templates, improving CSS for accessibility &
+              user experience, and developing minor changes to the custom
+              theme</strong
+            >. Private repository.
+          </p>
 
-            <section>
-                <h2>JobNote</h2>
-                <p>I built <a href="https://jobnote.app">this hobby project</a> as a way to help job seekers improve
-                    their application experience. The web
-                    app does not feed user data into an LLM like ChatGPT, which would generate résumés that are
-                    error
-                    prone and sloppy. Instead, the user's résumé is split up and saved to a database along with
-                    vector
-                    embeddings representing the content. When a user optimizes their résumé for a particular job,
-                    the
-                    server compares the embeddings of the job description with the embeddings of the résumé and
-                    builds a
-                    new document tailored for that particular job.
-                </p>
-                <p>
-                    JobNote is a Next.js Typescript application using the app router. The embeddings are generated
-                    with
-                    the OpenAI API and stored in a postgres database, along with user information and résumé
-                    content.
-                    The backend of the site is an Express server. There is also a <a
-                        href="https://chromewebstore.google.com/detail/jobnote-saver/ggpaclpelgbjpolcfboamannhcdigiod">JobNote
-                        Chrome
-                        Extension</a> that allows users to save jobs to their account as the browse the web.
-                </p>
-            </section>
+          <img
+            class="highlightPhoto"
+            src="../images/press.png"
+            width="600"
+            alt=""
+          />
 
-            <section>
-                <h2>Association Multisite</h2>
-                <p>
-                    Hopkins Press works extensively with academic associations to produce their journals—as part of this
-                    we
-                    also maintain websites for them. Previously, the method was to "copy and paste" one association site
-                    to
-                    create another. This created two problems: bug fixes would not be reflected across all the sites and
-                    updating Drupal versions required updating each site individually.
-                </p>
-                <p>
-                    Because the associations re-used much of the same functionality, we transitioned to using a Drupal
-                    multisite to streamline the development process. I built out the templates, coded custom modules in
-                    PHP,
-                    and wrote out the CSS that would apply to all the sites, keeping accessibility and usability front
-                    and
-                    center. Maintain the server (Linux) and Apache configuration, keeping things up to date according to
-                    the
-                    quarterly security audits. As a result of adopting this multsite structure, <strong>time spent
-                        creating
-                        a new site is under 30 minutes and Drupal updates only need to be completed once for the
-                        entirety of
-                        the sites</strong>.
-                </p>
-            </section>
-            <section>
-                <h2>Video Format Conversion Automation</h2>
-                <p>FSU was maintaining a collection of over 800 videos developed from 2007-2015 through the <a
-                        href="https://en.wikipedia.org/wiki/Geoset">GEOSET initative</a>. These videos could only run
-                    through the outdated Mediasite player and cost the university more than $10,000 per month. To
-                    preserve
-                    these records, I wrote a <a href="https://github.com/rubensebastian/videoDownload">collection of
-                        python
-                        scripts</a> to download the collection of files, convert the slides (images) into video based on
-                    timings pulled from xml, and overlay the slides with a speaker video if necessary. The project used
-                    a
-                    Selenium bot and a number of video manipulation libraries for python.
-                </p>
-            </section>
-            <section>
-                <h2>eTextbook Retrieval Automation</h2>
-                <p>This project serves to automate a number of process associated with FSU Libraries’ eTextbook program.
-                    Previously,
-                    the Libraries used part-time staff to manually compile thousands of entries. I drastically reduced
-                    time
-                    spent on
-                    this project by automating calls to an API, compiling results in the needed CSV files, and running a
-                    bot
-                    with
-                    Selenium to check access models (which were generated separately from the API). <a
-                        href="https://github.com/rubensebastian/eTextbook-Search">eTextbook Automation Github Repo</a>.
-                </p>
-            </section>
-            <section>
-                <h2>Math Fun</h2>
-                <p>I began developing <a href="https://math-fun.org">Math Fun</a> as a digitization of Math Fun Day with
-                    the
-                    FSU Math Department. After the event, I have continued to maintain and add to the project. The
-                    purely
-                    front-end project is built on React.js, and it uses p5.js for visualization of some of the
-                    components.
-                    <a href="https://github.com/rubensebastian/math-fun-1">Math Fun Github Repo</a>.
-                </p>
-            </section>
-        </div>
+          <p>
+            Johns Hopkins Unversity Press builds and maintains websites for
+            academic organizations (e.g.
+            <a href="https://www.dantesociety.org">Dante Society of America</a>)
+            using a Drupal multisite, which drastically speeds up development
+            while allowing for customizations on a per-site basis. I handle
+            <em>all parts</em> of the multisite: developing
+            <strong
+              >an extensive custom theme, custom modules (php/javascript),
+              accessible & usable CSS, and robust twig templates</strong
+            >. Private repository.
+          </p>
+        </section>
+
+        <section aria-labelledby="Next">
+          <h2 id="Next">Next (TypeScript)</h2>
+          <p>
+            The Book Chatbot is embedded on some Hopkins Press books (e.g. on
+            <a href="https://press.jhu.edu/books/title/53869/teaching-ai"
+              >Teaching with AI</a
+            >). The chatbot uses Retrieval Augmented Generation to answer
+            questions about the book. The chatbot is built with
+            <strong
+              >Next TypeScipt, the
+              <a href="https://www.npmjs.com/package/ai">AI SDK</a>, server
+              routes to handle the calls to the database, and constructed URLs
+              based on the unique identifier of the book</strong
+            >.
+            <a href="https://github.com/raleman3jhu/chatbot-iframe"
+              >Chatbot repository</a
+            >
+          </p>
+          <p>
+            <a href="https://jobnote.app">JobNote</a> is a hobby project to
+            improve the job search experience. It uses
+            <strong
+              >Next TypeScript, with server routes for user management (<a
+                href="#Express"
+                >most server functionality handled with a separate Express
+                server</a
+              >)</strong
+            >.
+            <a href="https://github.com/rubensebastian/jnote"
+              >JobNote repository</a
+            >
+          </p>
+
+          <img
+            class="highlightPhoto"
+            src="../images/jobnote-portfolio.png"
+            width="600"
+            alt=""
+          />
+
+          <p>
+            <a href="https://math-fun.org">Math Fun</a> is a work project turned
+            passion project. It uses <strong>Next.js and p5.js</strong> to
+            illustrate math concepts.
+            <a href="https://github.com/rubensebastian/math-fun-1"
+              >Math Fun repository</a
+            >
+          </p>
+          <p>jess</p>
+        </section>
+
+        <section aria-labelledby="CSS">
+          <h2 id="CSS">Accessiblity & CSS</h2>
+          <p>tailwind, responsive css</p>
+        </section>
+
+        <section aria-labelledby="databases">
+          <h2 id="databases">Databases (SQL and NoSQL)</h2>
+          <p>prisma orm, db management</p>
+        </section>
+
+        <section aria-labelledby="Express">
+          <h2 id="Express">Express</h2>
+          <p>mobile apps and jobnote</p>
+        </section>
+
+        <section aria-labelledby="Servers">
+          <h2 id="Servers">Servers</h2>
+          <p>Content</p>
+        </section>
+
+        <section aria-labelledby="Git">
+          <h2 id="Git">Git</h2>
+          <p>Content</p>
+        </section>
+
+        <section aria-labelledby="Python">
+          <h2 id="Python">Python</h2>
+          <p>Content</p>
+        </section>
+
+        <section aria-labelledby="Embeddings">
+          <h2 id="Embeddings">Vector Embeddings</h2>
+          <p>Content</p>
+        </section>
+
+        <section aria-labelledby="Mobile">
+          <h2 id="Mobile">Mobile App</h2>
+          <p>Content</p>
+        </section>
+      </div>
     </main>
     <footer>
-        <p>© 2025 Ruben Aleman
-        </p>
+      <p>© 2025 Ruben Aleman</p>
     </footer>
-</body>
-
+  </body>
 </html>
