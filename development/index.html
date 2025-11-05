@@ -163,47 +163,134 @@
 
         <section aria-labelledby="CSS">
           <h2 id="CSS">Accessiblity & CSS</h2>
-          <p>tailwind, responsive css</p>
           <p>
             This site reflects my values on accessibility. The HTML uses
             <strong>semantic elements and proper structure</strong>. Colors were
-            chosen to look good while accounting for users with low vision or
+            chosen to
+            <strong
+              >look good while accounting for users with low vision or color
+              blindness</strong
+            >. Images are not used to convey information; they are purely
+            decorative. Font and font size were chosen to
+            <strong
+              >ensure legibility for users anywhere on the disability
+              spectrum</strong
+            >.
           </p>
-        </section>
-
-        <section aria-labelledby="databases">
-          <h2 id="databases">Databases (SQL and NoSQL)</h2>
-          <p>prisma orm, db management</p>
+          <p>
+            I incorporate responsive design into any CSS I write:
+            <strong
+              >relative measurements, flex box design, image srcsets</strong
+            >, etc. Moreover, I test rigorously: a design may work in principle
+            but fail in practice; it is therefore vital to test it on many
+            viewports before moving to a production server.
+          </p>
+          <p>
+            The CSS frameworks I work the most with are
+            <strong>Tailwind and SASS</strong>. I appreciate Tailwind for its
+            lightweight, straightforward patterns, and I use it mainly with Node
+            projects. I appreciate SASS for its modularity and syntax, and I use
+            it primarily for Drupal projects.
+          </p>
         </section>
 
         <section aria-labelledby="Express">
           <h2 id="Express">Express</h2>
-          <p>mobile apps and jobnote</p>
-        </section>
-
-        <section aria-labelledby="Servers">
-          <h2 id="Servers">Servers</h2>
-          <p>Content</p>
-        </section>
-
-        <section aria-labelledby="Git">
-          <h2 id="Git">Git</h2>
-          <p>Content</p>
+          <p>
+            I enjoy writing servers with Express, as it offers a lighweight,
+            easy-to-use Node environment.
+          </p>
+          <p>
+            I used Express for the backend of my mobile app,
+            <a href="https://apps.apple.com/us/app/fortunai/id6744840710"
+              >FortunAI</a
+            >
+            (private repository). To bring the server for the mobile app to
+            life, I used
+            <strong
+              >node packages including aws-sdk, OpenAI, Resend, and
+              Prisma</strong
+            >.
+          </p>
+          <p>
+            While I handled user management for
+            <a href="https://jobnote.app">JobNote</a> with Next's built-in
+            server routes, I needed more power for the actual functionality. The
+            Express backend includes node packages like
+            <strong>huggingface/transformers, zod, OpenAI, and Prisma</strong>.
+          </p>
         </section>
 
         <section aria-labelledby="Python">
           <h2 id="Python">Python</h2>
-          <p>Content</p>
+          <p>
+            I use Python not for applications, but rather to automate one-time
+            procedures.
+          </p>
+          <p>PLACEHOLDER FOR VECTOR EMBEDDINGS SCRIPT</p>
+          <p>
+            To convert about 800
+            <a href="https://en.wikipedia.org/wiki/Geoset">GEOSET</a> videos
+            from an outdated file format to mp4, I wrote a
+            <a href="https://github.com/rubensebastian/videoDownload"
+              >collection of Python scripts</a
+            >
+            that downloaded the collection of files, converted the slides
+            (images) into video based on timings pulled from xml, and overlaid
+            the slides with a speaker video if necessary. This used a
+            <strong
+              >Selenium bot and video manipulation libraries for Python</strong
+            >.
+          </p>
+          <p>
+            Rather than using part-time staff to manually compile thousands of
+            entries in the
+            <a
+              href="https://www.lib.fsu.edu/teaching-and-learning/course-materials/etextbook-information"
+              >FSU Libraries’ eTextbook program</a
+            >, I
+            <strong
+              >automated calls to an API, compiled results in the needed CSV
+              files, and ran a bot with Selenium to check access models</strong
+            >
+            (generated separately from the API).
+            <a href="https://github.com/rubensebastian/eTextbook-Search"
+              >eTextbook Automation Github Repo</a
+            >.
+          </p>
         </section>
 
-        <section aria-labelledby="Embeddings">
-          <h2 id="Embeddings">Vector Embeddings</h2>
-          <p>Content</p>
+        <section aria-labelledby="Servers">
+          <h2 id="Servers">Servers</h2>
+          <p>
+            For work projects, we run
+            <strong>Apache on Red Hat Enterprise Linux machines</strong>. These
+            <strong>server configurations pass rigorous security audits</strong
+            >, and I consistently make tweaks to remedy any issues disocvered in
+            these audits.
+          </p>
+          <p>
+            For personal projects, I typically use
+            <strong>nginx on linux servers</strong>
+            (DigitalOcean Droplets). I use
+            <strong
+              >pm2 to keep the node projects running and responding to
+              requests</strong
+            >.
+          </p>
         </section>
 
-        <section aria-labelledby="Mobile">
-          <h2 id="Mobile">Mobile App</h2>
-          <p>Content</p>
+        <section aria-labelledby="Git">
+          <h2 id="Git">Git</h2>
+          <p>
+            For work projects, we use <strong>Enterprise Bitbucket</strong>. I
+            configure SSH keys on the server and "ddev auth" locally.
+          </p>
+          <p>
+            For personal projects, I use <strong>GitHub</strong>. I use this
+            mainly as backup and to keep production servers up to date with the
+            latest changes.
+          </p>
         </section>
       </div>
     </main>
