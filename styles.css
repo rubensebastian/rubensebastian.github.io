@@ -12,7 +12,7 @@
     --menu-background: #0a0a0a;
     --menu-text: #ffffff;
 
-    --content-width: 1600px;
+    --content-width: 1500px;
     --menu-indent: 15px;
 
     --paragraph-margin-bottom: 1.5rem;
@@ -45,6 +45,11 @@ h4:has(+ p),
 h5:has(+ p),
 h6:has(+ p) {
     margin-block: 0.1rem;
+}
+
+:where(h1, section h1, article h1, nav h1, aside h1) {
+    font-size: 2em;
+    margin-block: 0.67em;
 }
 
 p {
@@ -220,7 +225,7 @@ main {
             border-radius: 1em;
 
             @media (max-width: 1500px) {
-                width: 250px;
+                max-width: 250px;
             }
         }
 
