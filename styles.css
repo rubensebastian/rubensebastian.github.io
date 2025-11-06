@@ -12,10 +12,20 @@
     --menu-background: #0a0a0a;
     --menu-text: #ffffff;
 
-    --content-width: 1200px;
+    --content-width: 1600px;
     --menu-indent: 15px;
 
     --paragraph-margin-bottom: 1.5rem;
+}
+
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
 
 html {
@@ -27,12 +37,13 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* replace with :heading once available */
+h1:has(+ p),
+h2:has(+ p),
+h3:has(+ p),
+h4:has(+ p),
+h5:has(+ p),
+h6:has(+ p) {
     margin-block: 0.1rem;
 }
 
@@ -206,10 +217,20 @@ main {
             border-radius: 1em;
         }
 
-        p.introText {
+        section.resume {
             margin-inline: 1rem;
-            max-width: calc(var(--content-width) - 350px);
+
+            @media (min-width: 1250px) {
+                max-width: calc(var(--content-width) - 750px);
+                margin-inline: 2rem;
+            }
+
+            @media (min-width: 1500px) {
+                max-width: calc(var(--content-width) - 500px);
+            }
         }
+
+
     }
 
     div.mainContent {
@@ -252,7 +273,6 @@ footer {
     margin-inline: auto;
     display: block;
     margin-block-end: var(--paragraph-margin-bottom);
-    /* max-width: min(600px, 100% - 1rem); */
     max-width: 100%;
     height: auto;
     border-radius: .25rem;

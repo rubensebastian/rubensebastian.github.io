@@ -1,47 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Home page of the portfolio site of Ruben Aleman"
+    />
+    <title>Home | Ruben Aleman</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  </head>
 
-<head>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
-  <script src="sketch.js"></script> -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Home page of the portfolio site of Ruben Aleman">
-  <title>Home | Ruben Aleman</title>
-  <link rel="stylesheet" href="../styles.css">
-  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-</head>
+  <body>
+    <header>
+      <nav>
+        <ul id="home">
+          <li>
+            <a href="/"><span id="firstName">Ruben</span> Aleman</a>
+          </li>
+        </ul>
+        <label for="menuToggle" tabindex="0">Menu</label>
+        <input id="menuToggle" name="menuToggle" type="checkbox" />
+        <ul id="mainLinks">
+          <li>
+            <a href="/development"><span class="linkText">Development</span></a>
+          </li>
+          <li>
+            <a href="/communication"
+              ><span class="linkText">Communication</span></a
+            >
+          </li>
+          <li>
+            <a href="/about"><span class="linkText">About Ruben</span></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="home">
+        <img height="370" width="250" src="./images/ruben-prof-pfp-vert.avif" />
+        <section class="resume">
+          <h1 id="resume">
+            <span class="sr-only">Resume for </span>Ruben Aleman
+          </h1>
 
-<body>
-  <header>
-    <nav>
-      <ul id="home">
-        <li><a href="/"><span id="firstName">Ruben</span> Aleman</a></li>
-      </ul>
-      <label for="menuToggle" tabindex="0">Menu</label>
-      <input id="menuToggle" name="menuToggle" type="checkbox" />
-      <ul id="mainLinks">
-        <li>
-          <a href="/development"><span class="linkText">Development</span></a>
-        </li>
-        <li>
-          <a href="/communication"><span class="linkText">Communication</span></a>
-        </li>
-        <li>
-          <a href="/about"><span class="linkText">About Ruben</span></a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <div class="home">
-      <img height="250" width="250" src="./images/rubencubedpfptilted.png">
-      <p class="introText">I write code.</p>
-    </div>
-  </main>
-  <footer>
-    <p>© 2025 Ruben Aleman</p>
-  </footer>
-</body>
+          <h2>Experience</h2>
 
+          <h3>Web Developer @ Johns Hopkins University Press</h3>
+          <p>
+            <time datetime="2023-12">Dec 2023</time> -
+            <time datetime="2025-11">Present</time>
+          </p>
+          <ul>
+            <li>
+              Build and maintain large-scale codebases in Drupal, including a
+              Drupal multisite.
+            </li>
+            <li>Build custom Drupal modules with PHP and JavaScript.</li>
+            <li>
+              Integrate AI into products to create features like a
+              retrieval-augmented chatbot, natural language search, and
+              automated FAQ response emails.
+            </li>
+            <li>
+              Collaborate with internal and external clients to understand
+              needs, establish expectations, and communicate progress on web
+              projects.
+            </li>
+          </ul>
+
+          <h3>Digital Accessibility Specialist @ Florida State University</h3>
+          <p>
+            <time datetime="2022-02">Feb 2022</time> -
+            <time datetime="2023-12">Dec 2023</time>
+          </p>
+          <ul>
+            <li>
+              Used tools like SiteImprove and WebAIM to identify recurring
+              accessibility issues across the FSU Libraries website.
+            </li>
+            <li>
+              Tested keyboard-only access with VoiceOver (macOS) and JAWS
+              (Windows) to identify specific WCAG errors.
+            </li>
+            <li>
+              Edited views and templates in Drupal to fix accessibility errors
+              identified in testing.
+            </li>
+            <li>
+              Streamlined accommodation requests by creating a dedicated email
+              address and adding links for accessibility services (e.g.,
+              HathiTrust Digital Library resources).
+            </li>
+            <li>
+              Developed a workflow using automatic speech recognition and
+              remediation to caption audio/video in the Libraries’ research
+              repository.
+            </li>
+            <li>
+              Created instructional job aids on accessibility and quality for
+              staff in graphic design, AV, web content editing, and digital
+              scholarship.
+            </li>
+            <li>
+              Reviewed VPATs and provided recommendations for the e-resource
+              acquisition team.
+            </li>
+          </ul>
+
+          <h3>Technical Support Specialist @ Florida State University</h3>
+          <p>
+            <time datetime="2021-07">Jul 2021</time> -
+            <time datetime="2022-02">Feb 2022</time>
+          </p>
+          <ul>
+            <li>
+              Troubleshot and resolved technical problems in Canvas LMS and
+              integrated third-party apps.
+            </li>
+            <li>
+              Provided customer support to students, staff, faculty, and
+              administration.
+            </li>
+            <li>
+              Wrote and edited documentation for FSU’s Canvas knowledge base.
+            </li>
+            <li>
+              Communicated technical solutions via Zoom, phone, and email.
+            </li>
+          </ul>
+
+          <h2>Education</h2>
+
+          <p><strong>B.S. in Mathematics @ SUNY Stony Brook</strong></p>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <p>© 2025 Ruben Aleman</p>
+    </footer>
+  </body>
 </html>
