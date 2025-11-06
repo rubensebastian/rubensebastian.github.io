@@ -39,7 +39,17 @@
     </header>
     <main>
       <div class="home">
-        <img height="370" width="250" src="./images/ruben-prof-pfp-vert.avif" />
+        <img
+          srcset="
+            ../images/ruben-prof-pfp-vert-250.avif   250w,
+            ../images/ruben-prof-pfp-vert-500.avif   500w,
+            ../images/ruben-prof-pfp-vert-1000.avif 1000w,
+            ../images/ruben-prof-pfp-vert-1500.avif 1500w
+          "
+          sizes="(width < 750px) 250px, 500px"
+          src="../images/ruben-prof-pfp-vert-1500.avif"
+          alt=""
+        />
         <section class="resume">
           <h1 id="resume">
             <span class="sr-only">Resume for </span>Ruben Aleman

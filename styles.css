@@ -209,28 +209,25 @@ main {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
+
+        @media (max-width: 950px) {
+            flex-wrap: wrap;
+        }
 
         min-height: 80vh;
 
         img {
             border-radius: 1em;
+
+            @media (max-width: 1500px) {
+                width: 250px;
+            }
         }
 
         section.resume {
-            margin-inline: 1rem;
-
-            @media (min-width: 1250px) {
-                max-width: calc(var(--content-width) - 750px);
-                margin-inline: 2rem;
-            }
-
-            @media (min-width: 1500px) {
-                max-width: calc(var(--content-width) - 500px);
-            }
+            margin-inline: 2rem;
+            max-width: 1050px;
         }
-
-
     }
 
     div.mainContent {
