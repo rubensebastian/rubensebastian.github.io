@@ -12,7 +12,7 @@
     --menu-background: #0a0a0a;
     --menu-text: #ffffff;
 
-    --content-width: 1500px;
+    --content-width: 1200px;
     --menu-indent: 15px;
 
     --paragraph-margin-bottom: 1.5rem;
@@ -70,8 +70,9 @@ header nav {
     align-items: stretch;
     justify-content: space-between;
     background-color: var(--dark-theme-background);
-    max-width: min(var(--content-width), 100% - 2rem);
+    max-width: min(calc(var(--content-width) + 250px), 100% - 2rem);
     margin-inline: auto;
+    user-select: none;
 
     a {
         color: var(--menu-text);
@@ -226,19 +227,45 @@ main {
 
             @media (max-width: 1500px) {
                 width: 250px;
-                aspect-ratio: 2 / 3;
+                aspect-ratio: 25 / 37;
             }
         }
 
         section.resume {
             margin-inline: 2rem;
-            max-width: 1050px;
+            max-width: 850px;
         }
     }
 
     div.mainContent {
         max-width: min(var(--content-width), 100% - 2rem);
         margin-inline: auto;
+
+        img {
+            border-radius: 1em;
+
+            display: block;
+            margin-inline: auto;
+
+            width: 250px;
+            aspect-ratio: 4 / 3;
+
+            @media (min-width: 550px) {
+                width: 500px;
+            }
+
+            @media (min-width: 750px) {
+                width: 700px;
+            }
+
+            @media (min-width: 1050px) {
+                width: 1000px;
+            }
+
+            @media (min-width: 1550px) {
+                width: 1200px;
+            }
+        }
     }
 
     a {
@@ -264,6 +291,7 @@ footer {
     justify-content: end;
 
     padding-inline: 20px;
+    margin-block: 1rem;
 
     p {
         margin-block: 20px;
